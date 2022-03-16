@@ -7,11 +7,11 @@ class Registered_user {
     public $discount=0;
 
     public function __construct($name, $email) {
-        $this->genere = $name;
-        $this->titolo = $email;
+        $this->name = $name;
+        $this->email = $email;
     }
 
     public function setDiscount() {
-        
+
     }
 }    
