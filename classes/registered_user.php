@@ -11,7 +11,7 @@ class Registered_user {
         $this->email = $email;
     }
 
-    public function setDiscount() {
+  
 
-    }
+    
 }    
