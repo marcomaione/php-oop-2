@@ -1,20 +1,19 @@
 <?php
 
-require_once __DIR__ . '/classes/registered_user.php';
 require_once __DIR__ . '/classes/user.php';
-require_once __DIR__ . '/classes/giochi.php';
-require_once __DIR__ . '/classes/accessori.php';
-require_once __DIR__ . '/classes/alimentazione.php';
+require_once __DIR__ . '/classes/creditCard.php';
 
 
-$utente = new User('Mario',40);
-$utenteRegistrato = new Registered_user('pippo', 'pippo@.it');
-$game = new Giochi('palla', 'corda', 'peluche');
-$accessory = new Accessori('cuccia','guinzaglio','collare');
-$powerSupply = new Alimentazione('mangime secco','scatoletta cibo umido','crocchette al pollo secche');
+$utente = new User('Mario','rossi', 'mario@.it');
+$myCreditCard = new CreditCard ();
+$myCreditCard->setMeseScadenza('04');
+$myCreditCard->setAnnoScadenza('22');
+$myCreditCard->setCvv('123');
+$myCreditCard->setNumber('4242424242424242');
+$myCreditCard->utente = "Mario Rossi";
+
+if ($myCreditCard->isExpired()) {
+    $utente->setCreditCard($myCreditCard);
+}
 
 var_dump($utente);
-var_dump($utenteRegistrato);
-var_dump($game);
-var_dump($accessory);
-var_dump($powerSupply);

@@ -8,6 +8,7 @@ class user {
     public $cognome;
     protected $email;
     protected $discount = 0;
+    protected $creditCard;
 
     public function __construct($nome, $cognome,$email) {
         $this->nome = $nome;
@@ -29,6 +30,10 @@ class user {
     
     public function getDiscount(){
         return $this->discount;
+    }
+
+    public function setCreditCard($creditCard) {
+        $this->creditCard = $creditCard;
     }
 
 }    

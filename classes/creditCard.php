@@ -47,7 +47,7 @@ class CreditCard {
 
     public function setCvv($cvv) {
         if (is_numeric($cvv) && $cvv >=0 && $cvv <= 999) {
-            $this->annoScadenza = $cvv;
+            $this->cvv = $cvv;
         }
 
     }
