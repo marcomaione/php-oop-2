@@ -1,16 +1,9 @@
 <?php
 
-
-class alimentazione {
+require_once __DIR__ . '/prodotto.php';
+class alimentazione extends Prodotto {
     
-    public $alimentazione1;
-    public $alimentazione2;
-    public $alimentazione3;
-
-    public function __construct($alimentazione1, $alimentazione2,$alimentazione3) {
-        $this->alimentazione1= $alimentazione1;
-        $this->alimentazione2 = $alimentazione2;
-        $this->alimentazione3 = $alimentazione3;
-    }
+    public $scadenza;
+    
 
 }  
