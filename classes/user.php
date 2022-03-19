@@ -1,7 +1,9 @@
 <?php
 
+require_once __DIR__ . '/../traits/Address.php';
 class user {
     
+    use Adress;
     public $nome;
     public $cognome;
     protected $email;

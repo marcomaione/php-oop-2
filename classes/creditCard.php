@@ -59,6 +59,16 @@ class CreditCard {
 
     }
 
+    public function isExpired() {
+        $expires = DateTime::createFromFormat('m-y', $this->meseScadenza.'-'.$this->annoScadenza);
+        $now = new DateTime();
+
+        if ($expires < $now) {
+            return true;
+        }
+        return false;
+    }
+
     
 
 }
